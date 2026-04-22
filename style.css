@@ -127,6 +127,12 @@ main > section{
     color: #727272;
 
  } 
+ /* some title and descrtiopon 
+  */  
+
+  .fact-description{
+   max-width: 540px;
+}
  /* some fact related style */ 
  .facts-container{
    display: grid;
@@ -166,13 +172,34 @@ main > section{
    margin-top: 5px;
    /* margin-top:10px; */
   }  
-.fact-description{
-   max-width: 540px;
+
+
+/* sponsor related styles */
+    .sponsor-info{
+      max-width: 540px; 
+      margin: 50px auto; 
+      text-align: center;
+    }
+.sponsor-companies{
+   display:grid;
+   grid-template-columns: repeat(5,1fr); 
+} 
+.sponsor-companies img{
+   filter:grayscale(100%)
 }
+
+
+
+
+
+
+
+
+
 
  /* responsive media query */
  @media screen and (max-width:576px){
-    .navbar , 
+    .navbar, 
     .nav-links,
     .teams{
         flex-direction: column;
@@ -182,7 +209,28 @@ main > section{
     } 
     .our-features{
       margin-left: 20px;
+    }   
+
+    /* facts style */
+    .facts-container{
+      grid-template-columns: 1fr; 
+      gap:10px; 
+      /* eivabe gap dewa jay  */
     }
+    .fact{
+    margin: 5px auto;
+    }  
+    /* sponsors style */
+     .sponsor-companies{
+      grid-template-columns: 1fr; 
+       
+     } 
+     .sponsor-companies img{
+      /* margin: 10px auto;  eivabe dile hobe  */ 
+      /* justify-content: center;  */
+      margin: 40px auto;
+     } 
+     .
     
  } 
    /* medium size device */
@@ -192,5 +240,16 @@ main > section{
         } 
         .our-features{
          margin-left: 50px auto;
+        } 
+        .sponsor-companies{
+         grid-template-columns: repeat(3,1fr); 
+         gap: 50px; 
+         justify-items: center;
+        } 
+        .facts-container{
+         grid-template-columns: repeat(2,1fr); 
+         gap:30px; 
+         justify-items: center;
+           
         }
     }
